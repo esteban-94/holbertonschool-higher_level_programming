@@ -14,8 +14,8 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Re-definition of square attribute to private"""
-        if (isinstance(value, int) is False):
+        """Re-definition of square size attribute to private"""
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif (value < 0):
             raise ValueError("size must be >= 0")
