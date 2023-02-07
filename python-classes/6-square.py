@@ -31,7 +31,8 @@ class Square:
     @position.setter
     def position(self, value):
         """Re-definition of square position attribute to private"""
-        if not isinstance(value, tuple) or value[0] < 0 or value[1] < 0:
+        if not isinstance(value, tuple) or value[0] < 0 or value[1] < 0 \
+           or not value[0] or not value[1]:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
