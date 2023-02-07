@@ -5,12 +5,12 @@
 class Square:
     """Definition of square attribute"""
     def __init__(self, size=0):
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
         """Definition of square size"""
-        return self.size
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -20,8 +20,8 @@ class Square:
         elif (value < 0):
             raise ValueError("size must be >= 0")
         else:
-            self.size = value
+            self.__size = value
 
     def area(self):
         """Calcs  and return the area of square"""
-        return self.size ** 2
+        return self.__size ** 2
