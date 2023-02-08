@@ -46,7 +46,8 @@ class Square:
         """Prints a square with # symbol"""
         if self.size == 0:
             print('')
-        for i in range(self.position[1]):
-            print('')
-        for i in range(self.size):
-            print(' ' * self.position[0] + '#' * self.size)
+        else:
+            for i in range(self.position[1]):
+                print('')
+            for i in range(self.size):
+                print(' ' * self.position[0] + '#' * self.size)
