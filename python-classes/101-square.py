@@ -61,5 +61,5 @@ class Square:
             for i in range(self.position[1]):
                 printable += "\n"
             for i in range(self.size):
-                printable += " " * self.position[0] + "#" * self.size
+                printable += " " * self.position[0] + "#" * self.size + "\n"
             return printable
