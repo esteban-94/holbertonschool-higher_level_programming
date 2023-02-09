@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-""" Add """
+"""
+>>> add_integer(5, 9)
+14
+"""
 
 
 def add_integer(a, b=98):
-    """ hello
+    """ 
+    >>> add_integer(5, 5)
+    10
     """
 
     if not isinstance(a, int) and not isinstance(a, float):
