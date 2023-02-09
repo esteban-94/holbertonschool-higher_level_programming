@@ -6,7 +6,7 @@
 
 
 def add_integer(a, b=98):
-    """ 
+    """
     >>> add_integer(5, 5)
     10
     """
