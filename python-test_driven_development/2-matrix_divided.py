@@ -24,4 +24,4 @@ def matrix_divided(matrix, div):
                 sub_list.append(round(ind_num / div, 2))
         new_matrix.append(sub_list)
 
-    return
+    return new_matrix
