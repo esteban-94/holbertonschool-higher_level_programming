@@ -56,15 +56,15 @@ class Rectangle:
             return printable
         else:
             for i in range(self.height):
-                printable += "#" * self.width
+                printable += "#" * self.width + "\n"
             return printable
 
-    def __repr__(self):
+    def repr(self):
         """Repr method to print"""
         printable = ""
         if self.width == 0 or self.height == 0:
             return printable
         else:
             for i in range(self.height):
-                printable += "#" * self.width
+                printable += "#" * self.width + "\n"
             return printable
