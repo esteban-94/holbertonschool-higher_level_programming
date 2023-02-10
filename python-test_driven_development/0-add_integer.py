@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-"""
->>> add_integer(5, 9)
-14
-"""
+'''this module will be testing by 0-add-integer.txt'''
 
 
 def add_integer(a, b=98):
-    """
-    >>> add_integer(5, 5)
-    10
-    """
+    '''This function sum two integers.'''
 
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
