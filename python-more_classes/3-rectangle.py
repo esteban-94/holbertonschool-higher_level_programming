@@ -55,8 +55,9 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return printable
         else:
-            for i in range(self.height):
+            for i in range(self.height - 1):
                 printable += "#" * self.width + "\n"
+            printable += "#" * self.width
             return printable
 
     def repr(self):
