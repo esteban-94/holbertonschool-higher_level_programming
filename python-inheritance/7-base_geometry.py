@@ -6,10 +6,11 @@ This module have a empty class named Geometry
 
 class BaseGeometry:
     """Class description for Base Geometry"""
+
     def area(self):
         """Public instance method that raise an Exception"""
         raise Exception('area() is not implemented')
-    
+
     def integer_validator(self, name, value):
         """Public instance method that validates value"""
         if not type(value) is int:
