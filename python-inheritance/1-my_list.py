@@ -14,6 +14,6 @@ class MyList(list):
 
     def print_sorted(self):
         """This function prints a list sorted in ascending order of integers"""
-        sorted_list = self[:]
+        sorted_list = self.MyList[:]
         sorted_list.sort()
         print(sorted_list)
