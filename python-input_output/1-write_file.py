@@ -7,4 +7,4 @@
 def write_file(filename="", text=""):
     """Writes some text on a file. This overwrites the content of the file"""
     with open(filename, encoding='utf-8', mode='w') as file:
-        return(file.write(text))
+        return file.write(text)
