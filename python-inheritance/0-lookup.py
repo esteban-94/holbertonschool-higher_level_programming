@@ -7,7 +7,7 @@ attributes and methods of an object
 
 def lookup(obj):
     """
-    This function returns a list of availables attributes and methos of an 
+    This function returns a list of availables attributes and methos of an
     object
     """
     return dir(obj)
