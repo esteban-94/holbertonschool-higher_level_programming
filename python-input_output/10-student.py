@@ -16,7 +16,7 @@ class Student():
     def to_json(self, attrs=None):
         """returns the dictionary description with simple data structure"""
         if attrs and all(type(attr) is str for attr in attrs)\
-           or len(attrs) == 0:
+           or attrs == []:
             returned_dict = {}
             for (key, value) in (self.__dict__).items():
                 for attr in attrs:
