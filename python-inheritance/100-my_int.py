@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 """
-    This module contains a 
+    This module contains a class that inherits from int
 """
 
 
 class MyInt(int):
-    """
-    MyInt
-    """
+    """MyInt inherits from int"""
 
     def __init__(self, number):
         """Constructor"""
