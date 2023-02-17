@@ -1,22 +1,16 @@
 #!/usr/bin/python3
-"""Script to save arguments to a 
-    file"""
-import sys
+'''Adds all arguments to a Python list,\
+     and then save them to a file'''
 import json
-"""Comment"""
+import sys
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-""""""
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-"""Comment"""
 
 try:
     arguments = load_from_json_file("add_item.json")
-except Exception:
+except:
     arguments = []
-"""Comment"""
 
-for element in range(len(sys.argv)) - 1:
-    arguments.append(sys.argv[element + 1])
-"""Comment"""
-with open("add_item.json", encoding='utf-8', mode='w') as file:
-    file.write(json.dumps(arguments))
+for i in sys.argv[1:]:
+    arguments.append(i)
+save_to_json_file(arguments, "add_item.json")
