@@ -25,5 +25,7 @@ class Student():
         return self.__dict__
 
     def reload_from_json(self, json):
-        """returns the dictionary description with simple data structure"""
-        pass
+        """reload the dictionary description with simple data structure"""
+        for key, value in json.items():
+            self.__dict__[key] = value
+        return self.__dict__
