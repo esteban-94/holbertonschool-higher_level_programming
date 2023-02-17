@@ -5,6 +5,7 @@
 
 
 def pascal_triangle(n):
+    """Def funct"""
     pascal_tri = []
     for row in range(n):
         pascal_tri.append([])
