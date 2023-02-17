@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module have a empty class named Geometry
+This module have a class for create a rectangle
 """
 
 
