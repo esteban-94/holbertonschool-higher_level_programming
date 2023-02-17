@@ -1,19 +1,11 @@
 #!/usr/bin/python3
-"""Script to save arguments to a file"""
-import sys
-import json
-"""Comment"""
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-""""""
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
-"""Comment"""
-try:
-    arguments = load_from_json_file("add_item.json")
-except Exception:
-    arguments = []
-"""Comment"""
-for element in range(len(sys.argv)) - 1:
-    arguments.append(sys.argv[element + 1])
-"""Comment"""
-with open("add_item.json", encoding='utf-8', mode='w') as file:
-    file.write(json.dumps(arguments))
+"""
+    Module to create from JSON
+"""
+
+
+def load_from_json_file(filename):
+    """creates an object from a JSON file"""
+    import json
+    with open(filename, encoding='utf-8') as file:
+        return json.load(file)
