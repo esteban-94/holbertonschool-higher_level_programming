@@ -15,4 +15,4 @@ class Student():
 
     def to_json(self):
         """returns the dictionary description with simple data structure"""
-        return (self.__dict__)
+        return self.__dict__
