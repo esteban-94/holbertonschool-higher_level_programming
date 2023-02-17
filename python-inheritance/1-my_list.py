@@ -5,9 +5,8 @@
 
 
 class MyList(list):
-    """
-    MyList class: an empty list that inherits the sort method from list class
-    """
+    """An empty list that inherits the sort method from list class"""
+
     def __init__(self):
         """Constructor"""
         self.MyList = []
