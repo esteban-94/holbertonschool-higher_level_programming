@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Script to save arguments to a file
+Script to save arguments to a file
 """
 
 import sys
