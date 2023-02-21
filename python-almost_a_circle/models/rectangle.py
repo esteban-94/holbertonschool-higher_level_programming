@@ -4,7 +4,7 @@ Module to stablish the Ractangle Class
 """
 
 
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
