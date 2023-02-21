@@ -91,6 +91,11 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """Prints a square with # symbol"""
+        """Prints a rectangle with # character"""
         for i in range(self.height):
             print('#' * self.width)
+
+    def __str__(self):
+        """Function that prints rectangle description"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - \
+               {self.width}/{self.height}"
