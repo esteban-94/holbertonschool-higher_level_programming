@@ -56,7 +56,7 @@ class Rectangle(Base):
         """Re-definition """
         if not isinstance(value, int):
             self.sint_error_all("x")
-        elif value <= 0:
+        elif value < 0:
             self.val_error_2("x")
         self.__x = value
 
@@ -70,7 +70,7 @@ class Rectangle(Base):
         """Re-definition """
         if not isinstance(value, int):
             self.sint_error_all("y")
-        elif value <= 0:
+        elif value < 0:
             self.val_error_2("y")
         self.__x = value
 
