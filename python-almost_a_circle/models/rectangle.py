@@ -85,3 +85,7 @@ class Rectangle(Base):
     def val_error_2(self, attr):
         """Aux function """
         raise ValueError(f"{attr} must be >= 0")
+
+    def area(self):
+        """Function that returns Rectangle's Area"""
+        return self.width * self.height
