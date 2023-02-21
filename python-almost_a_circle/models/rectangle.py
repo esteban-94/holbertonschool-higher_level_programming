@@ -72,7 +72,7 @@ class Rectangle(Base):
             self.sint_error_all("y")
         elif value < 0:
             self.val_error_2("y")
-        self.__x = value
+        self.__y = value
 
     def sint_error_all(self, attr):
         """Aux function """
