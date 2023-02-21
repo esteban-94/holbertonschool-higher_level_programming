@@ -75,10 +75,13 @@ class Rectangle(Base):
         self.__x = value
 
     def sint_error_all(self, attr):
+        """Aux function """
         raise TypeError(f"{attr} must be an integer")
 
     def val_error_1(self, attr):
+        """Aux function """
         raise ValueError(f"{attr} must be > 0")
 
     def val_error_2(self, attr):
+        """Aux function """
         raise ValueError(f"{attr} must be >= 0")
