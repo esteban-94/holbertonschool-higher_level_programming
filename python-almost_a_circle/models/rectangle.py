@@ -4,7 +4,7 @@ Module to stablish the Ractangle Class
 """
 
 
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -27,11 +27,10 @@ class Rectangle(Base):
     def width(self, value):
         """Re-definition """
         if not isinstance(value, int):
-            raise TypeError("width must be an integer")
+            self.sint_error_all("width")
         elif value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__width = value
+            self.val_error_1("width")
+        self.__width = value
 
     @property
     def height(self):
@@ -42,9 +41,9 @@ class Rectangle(Base):
     def height(self, value):
         """Re-definition """
         if not isinstance(value, int):
-            raise TypeError("height must be an integer")
+            self.sint_error_all("height")
         elif value <= 0:
-            raise ValueError("height must be > 0")
+            self.val_error_1("height")
         self.__height = value
 
     @property
@@ -55,8 +54,10 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Re-definition """
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        if not isinstance(value, int):
+            self.sint_error_all("x")
+        elif value <= 0:
+            self.val_error_2("x")
         self.__x = value
 
     @property
@@ -67,6 +68,17 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Re-definition """
-        if value < 0:
-            raise ValueError("y must be >= 0")
-        self.__y = value
+        if not isinstance(value, int):
+            self.sint_error_all("y")
+        elif value <= 0:
+            self.val_error_2("y")
+        self.__x = value
+
+    def sint_error_all(self, attr):
+        raise TypeError(f"{attr} must be an integer")
+
+    def val_error_1(self, attr):
+        raise ValueError(f"{attr} must be > 0")
+
+    def val_error_2(self, attr):
+        raise ValueError(f"{attr} must be >= 0")
