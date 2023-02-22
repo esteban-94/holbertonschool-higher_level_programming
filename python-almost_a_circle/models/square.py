@@ -16,5 +16,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Function that prints square description"""
-        return f"[Square] ({self.id}) {self.__x}/{self.__y} - "\
-               f"{self.__width}"
+        return f"[Square] ({self.id}) {self.x}/{self.y} - "\
+               f"{self.height}"
