@@ -101,3 +101,17 @@ class Rectangle(Base):
         """Function that prints rectangle description"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "\
                f"{self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """Function that updates the class attributes"""
+        if args:
+            if len(args) == 1:
+                self.id = args[0]
+            if len(args) == 2:
+                self.width = args[1]
+            if len(args) == 3:
+                self.height = args[2]
+            if len(args) == 4:
+                self.x = args[3]
+            if len(args) == 5:
+                self.y = args[4]
