@@ -38,3 +38,11 @@ class Base:
                 for obj in list_objs:
                     list_ret.append(obj.to_dictionary())
             file.write(cls.to_json_string(list_ret))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Return a list of JSON string representation of json_string"""
+        if json_string:
+            return (json.loads(json_string))
+        return ([])
+
