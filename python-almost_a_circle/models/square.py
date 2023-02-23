@@ -29,7 +29,7 @@ class Square(Rectangle):
     def size(self, value):
         """Re-definition """
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("size must be > 0")
         self.__width = value
