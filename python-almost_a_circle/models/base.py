@@ -4,6 +4,9 @@ Module to stablish tha base class
 """
 
 
+import json
+
+
 class Base:
     """Class Base"""
 
@@ -17,7 +20,10 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    def to_json_string(my_obj):
-        """returns the JSON representation of an object (string)"""
-        import json
-        return json.dumps(my_obj)
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns a JSON string representation of the dictionary"""
+        if list_dictionaries is None:
+            return []
+        else:
+            return json.dumps(list_dictionaries)
