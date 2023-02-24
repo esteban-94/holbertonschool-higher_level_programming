@@ -13,7 +13,7 @@ class TestRectangle(unittest.TestCase):
 
     rectangle_1 = Rectangle(1, 2)
 
-    def test_base_create(self):
+    def test_rectangle_create(self):
         self.assertEqual(self.rectangle_1.id, 1)
 
 
