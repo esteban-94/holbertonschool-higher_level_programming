@@ -27,8 +27,15 @@ class TestBase(unittest.TestCase):
         self.assertEqual(self.base_89._Base__nb_objects, 2)
         self.assertEqual(self.base_89.id, 89)
 
-    def test_base_to_json_string(self):
+    def test_base_to_json_string_void(self):
         self.assertEqual(Base.to_json_string(None), "[]")
+
+    def test_base_to_json_string_full(self):
+        self.assertEqual(Base.to_json_string([{'id':12}]), '[{"id": 12}]')
+
+    def test_base_from_json_string(self):
+        self.assertEqual(Base.from_json_string(None), [])
+
 
 
 if __name__ == '__main__':
