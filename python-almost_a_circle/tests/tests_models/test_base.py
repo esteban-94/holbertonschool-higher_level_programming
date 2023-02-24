@@ -16,7 +16,7 @@ class TestBase(unittest.TestCase):
 
     def test_base_create(self):
         self.assertEqual(self.base_1.id, 1)
-    
+        self.assertEqual(self._Base__base_1.id, 1)
 
 if __name__ == '__main__':
     unittest.main()
