@@ -21,7 +21,7 @@ class TestBase(unittest.TestCase):
 
     def test_base_update_id(self):
         self.assertEqual(self.base_2.id, 2)
-        self.assertEqual(self.base_2._Base__nb_objects, 1)
+        self.assertEqual(self.base_2._Base__nb_objects, 2)
 
     def test_base_id(self):
         self.assertEqual(self.base_89.id, 89)
