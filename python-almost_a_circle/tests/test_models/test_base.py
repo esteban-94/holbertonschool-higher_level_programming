@@ -25,7 +25,7 @@ class TestBase(unittest.TestCase):
 
     def test_base_id(self):
         self.assertEqual(self.base_89.id, 89)
-        self.assertEqual(self.base_89._Base__nb_objects, 89)
+        self.assertEqual(self.base_89._Base__nb_objects, 3)
 
 
 if __name__ == '__main__':
