@@ -11,9 +11,10 @@ from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
     """Test class for Rectangle class"""
 
+    rectangle_1 = Rectangle(1, 2)
+
     def test_base_create(self):
-        rectangle_1 = Rectangle(1, 2)
-        self.assertEqual(rectangle_1.id, 1)
+        self.assertEqual(self.rectangle_1.id, 1)
 
 
 if __name__ == '__main__':
