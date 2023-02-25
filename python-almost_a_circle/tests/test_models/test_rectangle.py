@@ -12,12 +12,12 @@ class TestRectangle(unittest.TestCase):
 
     rectangle_1 = Rectangle(1, 2)
 
-    def test_rectangle_create(self):
+    def test_rectangle_create_1(self):
         self.assertEqual(self.rectangle_1.width, 1)
 
     def test_rectangle_create_except_1(self):
         with self.assertRaises(TypeError):
-            rect = Rectangle(1, "2")
+            rect = Rectangle("1", 2)
 
     def test_rectangle_create_except_2(self):
         with self.assertRaises(TypeError):
@@ -30,6 +30,10 @@ class TestRectangle(unittest.TestCase):
     def test_rectangle_create_except_4(self):
         with self.assertRaises(TypeError):
             rect = Rectangle(1, 2, 3, "4")
+
+    def test_rectangle_create_2(self):
+        rect = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(self.rectangle_1.width, 1)
 
 
 if __name__ == '__main__':
