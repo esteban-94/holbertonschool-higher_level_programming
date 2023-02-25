@@ -14,6 +14,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_rectangle_create(self):
         self.assertEqual(self.rectangle_1.id, 3)
+        self.assertEqual(self.rectangle_1.width, 1)
 
 
 if __name__ == '__main__':
